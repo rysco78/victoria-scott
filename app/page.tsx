@@ -3,9 +3,9 @@ import Link from 'next/link';
 import { books } from '@/lib/books';
 
 export const metadata: Metadata = {
-  title: 'About Victoria',
+  title: 'Victoria Scott | YA Author',
   description:
-    'Victoria Scott is the author of nine novels. Her books have been YALSA-nominated and have received starred reviews—the highest honor—by top literary critics. Her stories have been translated and sold in thirteen countries.',
+    'Author of critically acclaimed young adult and middle grade novels, including the "Collector" Trilogy and "Fire & Flood" Series.',
   openGraph: {
     title: 'About Victoria - Victoria Scott',
     description:
@@ -36,43 +36,23 @@ const otherWorks = [
 ];
 
 function BookGrid({ slugs }: { slugs: string[] }) {
-  const rows: string[][] = [];
-  for (let i = 0; i < slugs.length; i += 3) {
-    rows.push(slugs.slice(i, i + 3));
-  }
   return (
-    <>
-      {rows.map((row, rowIdx) => (
-        <div
-          key={rowIdx}
-          style={{ display: 'flex', gap: '30px', marginBottom: rowIdx < rows.length - 1 ? '30px' : 0 }}
-        >
-          {row.map((slug) => {
-            const book = books.find((b) => b.slug === slug);
-            if (!book) return null;
-            return (
-              <div
-                key={slug}
-                style={{ flex: '0 0 calc(33.333% - 20px)', maxWidth: 'calc(33.333% - 20px)' }}
-              >
-                <Link href={`/${slug}/`} style={{ display: 'block' }}>
-                  <img
-                    src={book.coverImage}
-                    alt={book.title}
-                    style={{ width: '100%', height: 'auto', display: 'block' }}
-                    loading="lazy"
-                  />
-                </Link>
-              </div>
-            );
-          })}
-          {row.length < 3 &&
-            Array.from({ length: 3 - row.length }).map((_, i) => (
-              <div key={`empty-${i}`} style={{ flex: '0 0 calc(33.333% - 20px)' }} />
-            ))}
-        </div>
-      ))}
-    </>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-[30px]">
+      {slugs.map((slug) => {
+        const book = books.find((b) => b.slug === slug);
+        if (!book) return null;
+        return (
+          <Link key={slug} href={`/${slug}/`} style={{ display: 'block' }}>
+            <img
+              src={book.coverImage}
+              alt={book.title}
+              style={{ width: '100%', height: 'auto', display: 'block', boxShadow: '0 8px 28px rgba(0,0,0,0.35)' }}
+              loading="lazy"
+            />
+          </Link>
+        );
+      })}
+    </div>
   );
 }
 
@@ -85,6 +65,7 @@ export default function Home() {
           style={{ padding: '60px 0 40px' }}
           className="flex flex-col md:flex-row gap-8 md:gap-10"
         >
+          {/* Desktop: photo on left */}
           <div
             style={{ flex: '0 0 33.333%', maxWidth: '33.333%' }}
             className="hidden md:block"
@@ -94,7 +75,7 @@ export default function Home() {
               alt="Victoria Scott"
               width={645}
               height={1000}
-              style={{ width: '100%', height: 'auto', display: 'block' }}
+              style={{ width: '100%', height: 'auto', display: 'block', boxShadow: '0 8px 28px rgba(0,0,0,0.35)' }}
             />
           </div>
           <div
@@ -105,9 +86,19 @@ export default function Home() {
               flexDirection: 'column',
               justifyContent: 'center',
               textAlign: 'center',
-              paddingLeft: '20px',
             }}
+            className="md:pl-5"
           >
+            {/* Mobile: full-width photo above title */}
+            <div className="md:hidden mb-6">
+              <img
+                src="https://www.victoriascott.com/wp-content/uploads/victoria-scott-headshot-new-e1770426233268.jpeg"
+                alt="Victoria Scott"
+                width={645}
+                height={1000}
+                style={{ width: '100%', height: 'auto', display: 'block', boxShadow: '0 8px 28px rgba(0,0,0,0.35)' }}
+              />
+            </div>
             <p
               style={{
                 fontFamily: 'var(--font-dosis)',
@@ -120,21 +111,6 @@ export default function Home() {
             >
               ABOUT VICTORIA
             </p>
-            <div className="md:hidden mb-6">
-              <img
-                src="https://www.victoriascott.com/wp-content/uploads/victoria-scott-headshot-new-e1770426233268.jpeg"
-                alt="Victoria Scott"
-                width={645}
-                height={1000}
-                style={{
-                  width: '60%',
-                  maxWidth: '280px',
-                  height: 'auto',
-                  display: 'block',
-                  margin: '0 auto',
-                }}
-              />
-            </div>
             <div style={{ textAlign: 'left' }}>
               <p style={{ marginBottom: '1em', lineHeight: 1.7 }}>
                 Victoria (Tori) Scott is the author of nine novels. Her books have been
@@ -207,19 +183,19 @@ export default function Home() {
           <p className="section-heading" style={{ marginBottom: '40px' }}>
             OTHER WORKS
           </p>
-          <div style={{ display: 'flex', gap: '30px', flexWrap: 'wrap' }}>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-[30px]">
             {otherWorks.map((work) => (
               <a
                 key={work.title}
                 href={work.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ display: 'block', width: 'calc(33.333% - 20px)', maxWidth: '300px' }}
+                style={{ display: 'block' }}
               >
                 <img
                   src={work.image}
                   alt={work.title}
-                  style={{ width: '100%', height: 'auto', display: 'block' }}
+                  style={{ width: '100%', height: 'auto', display: 'block', boxShadow: '0 8px 28px rgba(0,0,0,0.35)' }}
                   loading="lazy"
                 />
               </a>

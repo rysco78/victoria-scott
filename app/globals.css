@@ -73,3 +73,26 @@ body {
   background-color: #e6b029;
   color: #fff;
 }
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  color: #303133;
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 11px 26px;
+  border-radius: 8px;
+  border: 1.5px solid #303133;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-outline:hover {
+  background-color: #303133;
+  color: #fff;
+}

@@ -1,25 +1,25 @@
 export default function Nav() {
   return (
     <header
-      style={{ backgroundColor: 'transparent', height: '103px' }}
+      style={{ backgroundColor: '#ffffff', height: '103px' }}
       className="flex items-center relative z-10"
     >
       <div className="mx-auto flex items-center w-full px-8" style={{ maxWidth: '1200px' }}>
-        <div style={{ flex: 1 }} />
+        <div style={{ flex: 1 }} className="md:block hidden" />
         <a
           style={{
             fontFamily: 'var(--font-permanent-marker)',
-            fontSize: '50px',
             color: '#303133',
             textDecoration: 'none',
             lineHeight: 1,
           }}
+          className="text-[36px] md:text-[50px] flex-1 md:flex-none text-center md:text-left"
           aria-label="Victoria Scott — Home"
           href="/"
         >
           Victoria Scott
         </a>
-        <div style={{ flex: 1 }} className="flex justify-end items-center gap-5">
+        <div style={{ flex: 1 }} className="md:flex hidden justify-end items-center gap-5">
           <a
             href="https://www.instagram.com/heytoriscott"
             target="_blank"

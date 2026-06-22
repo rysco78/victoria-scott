@@ -68,16 +68,25 @@ export default function BookPage({ params }: Props) {
 
       {/* Content + cover */}
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 30px 60px' }}>
+        {/* Mobile: full-width cover between title and content */}
+        <div className="md:hidden mb-8">
+          <img
+            src={book.coverImage}
+            alt={book.coverAlt}
+            style={{ width: '100%', height: 'auto', display: 'block', boxShadow: '0 8px 28px rgba(0,0,0,0.35)' }}
+          />
+        </div>
+
         <div className="flex flex-col md:flex-row gap-10 md:gap-16">
           <div
-            style={{ flex: '0 0 66.666%', maxWidth: '66.666%' }}
-            className="w-full md:w-auto"
+            style={{ flex: '0 0 66.666%' }}
+            className="w-full md:max-w-[66.666%]"
           >
             <div
               className="book-content"
               dangerouslySetInnerHTML={{ __html: book.description }}
             />
-            <div style={{ marginTop: '30px', display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+            <div style={{ marginTop: '30px', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '12px' }}>
               <a
                 href={book.amazonUrl}
                 target="_blank"
@@ -91,7 +100,7 @@ export default function BookPage({ params }: Props) {
                 </svg>
                 ORDER ON AMAZON
               </a>
-              <Link href="/" className="btn-gold">
+              <Link href="/" className="btn-outline">
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <line x1="19" y1="12" x2="5" y2="12" />
                   <polyline points="12 19 5 12 12 5" />
@@ -100,14 +109,15 @@ export default function BookPage({ params }: Props) {
               </Link>
             </div>
           </div>
+          {/* Desktop: cover on right */}
           <div
             style={{ flex: '0 0 33.333%', maxWidth: '33.333%' }}
-            className="w-full md:w-auto"
+            className="hidden md:block"
           >
             <img
               src={book.coverImage}
               alt={book.coverAlt}
-              style={{ width: '100%', height: 'auto', display: 'block' }}
+              style={{ width: '100%', height: 'auto', display: 'block', boxShadow: '0 8px 28px rgba(0,0,0,0.35)' }}
             />
           </div>
         </div>
