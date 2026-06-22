@@ -45,7 +45,7 @@ export default function Nav() {
             </svg>
           </a>
           <a
-            href="mailto:hello@toriellescott.com"
+            href="mailto:v@victoriascott.com"
             aria-label="Email"
             style={{ color: '#303133' }}
             className="hover:opacity-60 transition-opacity"
