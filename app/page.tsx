@@ -26,7 +26,7 @@ const otherWorks = [
   {
     title: 'Four Houses',
     href: 'https://www.amazon.com/Four-Houses-Victoria-Scott-ebook/dp/B0058KSMFW/',
-    image: '/images/FOUR-HOUSES-2.jpeg',
+    image: '/images/FOUR-HOUSES-2.webp',
   },
   {
     title: "Stories I Don't Tell",
