@@ -26,12 +26,12 @@ const otherWorks = [
   {
     title: 'Four Houses',
     href: 'https://www.amazon.com/Four-Houses-Victoria-Scott-ebook/dp/B0058KSMFW/',
-    image: 'https://www.victoriascott.com/wp-content/uploads/FOUR-HOUSES-2.jpeg',
+    image: '/images/FOUR-HOUSES-2.jpeg',
   },
   {
     title: "Stories I Don't Tell",
     href: 'https://heytori.medium.com/the-stories-i-dont-tell-701e282e9ab2',
-    image: "https://www.victoriascott.com/wp-content/uploads/Stories-I-Dont-Tell.webp",
+    image: '/images/Stories-I-Dont-Tell.webp',
   },
 ];
 
@@ -71,7 +71,7 @@ export default function Home() {
             className="hidden md:block"
           >
             <img
-              src="https://www.victoriascott.com/wp-content/uploads/victoria-scott-headshot-new-e1770426233268.jpeg"
+              src="/images/victoria-scott-headshot-new-e1770426233268.jpeg"
               alt="Victoria Scott"
               width={645}
               height={1000}
@@ -92,7 +92,7 @@ export default function Home() {
             {/* Mobile: full-width photo above title */}
             <div className="md:hidden mb-6">
               <img
-                src="https://www.victoriascott.com/wp-content/uploads/victoria-scott-headshot-new-e1770426233268.jpeg"
+                src="/images/victoria-scott-headshot-new-e1770426233268.jpeg"
                 alt="Victoria Scott"
                 width={645}
                 height={1000}

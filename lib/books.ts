@@ -22,7 +22,7 @@ export const books: Book[] = [
     title: 'Violet Grenade',
     publisher: 'Entangled Teen',
     pages: 300,
-    coverImage: 'https://www.victoriascott.com/wp-content/uploads/Violet-Grenade-Cover.jpg',
+    coverImage: '/images/Violet-Grenade-Cover.jpg',
     coverAlt: 'Violet Grenade cover',
     description: `
       <p>Her name is Domino Ray.</p>
@@ -40,7 +40,7 @@ export const books: Book[] = [
     title: 'Hear the Wolves',
     publisher: 'Scholastic Press',
     pages: 240,
-    coverImage: 'https://www.victoriascott.com/wp-content/uploads/Hear-the-Wolves-Cover.jpg',
+    coverImage: '/images/Hear-the-Wolves-Cover.jpg',
     coverAlt: 'Hear the Wolves cover',
     description: `
       <p>Sloan is a hunter.</p>
@@ -58,7 +58,7 @@ export const books: Book[] = [
     title: 'Titans',
     publisher: 'Scholastic Press',
     pages: 320,
-    coverImage: 'https://www.victoriascott.com/wp-content/uploads/Titans-Cover.jpg',
+    coverImage: '/images/Titans-Cover.jpg',
     coverAlt: 'Titans cover',
     description: `
       <p>Ever since the Titans first appeared in her Detroit neighborhood, Astrid Sullivan's world has revolved around the mechanical horses. She and her best friend have spent countless hours watching them and their jockeys practice on the track. It's not just the thrill of the race. It's the engineering of the horses and the way they're programmed to seem so lifelike. The Titans are everything that fascinates Astrid, and nothing she'll ever touch.</p>
@@ -76,7 +76,7 @@ export const books: Book[] = [
     title: 'We Told Six Lies',
     publisher: 'Entangled Teen',
     pages: 400,
-    coverImage: 'https://www.victoriascott.com/wp-content/uploads/We-Told-Six-Lies-Cover.jpg',
+    coverImage: '/images/We-Told-Six-Lies-Cover.jpg',
     coverAlt: 'We Told Six Lies cover',
     description: `
       <p>Remember how many lies we told, Molly? It's enough to make my head spin. You were wild when I met you, and I was mad for you. But then something happened. And now you're gone.</p>
@@ -93,7 +93,7 @@ export const books: Book[] = [
     title: 'Fire & Flood',
     publisher: 'Scholastic Press',
     pages: 320,
-    coverImage: 'https://www.victoriascott.com/wp-content/uploads/Fire-and-Flood-Cover.jpg',
+    coverImage: '/images/Fire-and-Flood-Cover.jpg',
     coverAlt: 'Fire & Flood cover',
     description: `
       <p>Tella Holloway is losing it. Her brother is sick, and when a dozen doctors can't determine the cause, her parents decide to move to Montana for the fresh air. She's lost her friends, her parents are driving her crazy, her brother is dying—and she's helpless to change anything.</p>
@@ -113,7 +113,7 @@ export const books: Book[] = [
     title: 'Salt & Stone',
     publisher: 'Scholastic Press',
     pages: 320,
-    coverImage: 'https://www.victoriascott.com/wp-content/uploads/Salt-and-Stone-Cover.jpg',
+    coverImage: '/images/Salt-and-Stone-Cover.jpg',
     coverAlt: 'Salt & Stone cover',
     description: `
       <p>In <em>Fire &amp; Flood</em>, Tella Holloway faced a dangerous trek through the jungle and a terrifying march across the desert, braving one treacherous challenge after another with her Pandora, a mystical creature that could mean the difference between life and death. Now Tella's headed into a new race—an ocean and a mountain standing between her and the Cure that might save her brother's life.</p>
@@ -130,7 +130,7 @@ export const books: Book[] = [
     title: 'The Collector',
     publisher: 'Entangled Teen',
     pages: 350,
-    coverImage: 'https://www.victoriascott.com/wp-content/uploads/The-Collector-Cover.jpg',
+    coverImage: '/images/The-Collector-Cover.jpg',
     coverAlt: 'The Collector cover',
     description: `
       <p>Dante Walker is flippin' awesome, and he knows it. His good looks, killer charm, and stellar confidence have made him one of Hell's best soul collectors. His job is simple: weed through the losers and find souls worth collecting.</p>
@@ -148,7 +148,7 @@ export const books: Book[] = [
     title: 'The Liberator',
     publisher: 'Entangled Teen',
     pages: 325,
-    coverImage: 'https://www.victoriascott.com/wp-content/uploads/The-Liberator-Cover.jpg',
+    coverImage: '/images/The-Liberator-Cover.jpg',
     coverAlt: 'The Liberator cover',
     description: `
       <p>Dante has a shiny new cuff wrapped around his ankle, and he doesn't like it one bit. His new accessory comes straight from Big Guy himself and marks the former demon as a liberator. Despite his gritty past and bad boy ways, Dante Walker has been granted a second chance.</p>
@@ -166,7 +166,7 @@ export const books: Book[] = [
     title: 'The Warrior',
     publisher: 'Entangled Teen',
     pages: 325,
-    coverImage: 'https://www.victoriascott.com/wp-content/uploads/The-Warrior-Cover-v2.jpg',
+    coverImage: '/images/The-Warrior-Cover-v2.jpg',
     coverAlt: 'The Warrior cover',
     description: `
       <p>War between heaven and hell is coming, but Dante Walker makes it look damn good.</p>
